@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cowboys AC - Estimate Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="Cowboys AC Logo" class="logo" />
+    <h1>Generate PDF for HVAC Pricing</h1>
+
+    <label for="unit">Select unit:</label>
+    <select id="unit"></select>
+
+    <label for="tonnage">Select tonnage:</label>
+    <select id="tonnage"></select>
+
+    <button onclick="generatePDF()">Generate PDF</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
