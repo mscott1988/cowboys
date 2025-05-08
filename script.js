@@ -1,20 +1,43 @@
-
-let units;
-
-fetch('sample_units.json')
-  .then(response => response.json())
-  .then(data => {
-    units = data;
-    const manufacturerSelect = document.getElementById('manufacturer');
-    for (const mfr in units) {
-      const opt = document.createElement('option');
-      opt.value = mfr;
-      opt.innerText = mfr;
-      manufacturerSelect.appendChild(opt);
+const units = {
+  "Robert Madden": {
+    "C5A1V": {
+      "label": "C5A1V Variable Speed AC",
+      "options": {
+        "2 Ton": {
+          "price": 2379,
+          "coil": "EAM5X24",
+          "coil_price": 445,
+          "furnace": "G80CTL",
+          "furnace_price": 1460,
+          "seer2": 17.0,
+          "eer2": 10.5,
+          "ahri": "215691194",
+          "total_price": 4284,
+          "tax_credit": true
+        }
+      }
     }
-    manufacturerSelect.addEventListener('change', populateProducts);
-    populateProducts();
-  });
+  },
+  "Century HVAC Supplies": {
+    "YH4": {
+      "label": "YH4 Heat Pump",
+      "options": {
+        "2 Ton": {
+          "price": 2100,
+          "coil": "CM36",
+          "coil_price": 480,
+          "furnace": "TM8V",
+          "furnace_price": 1280,
+          "seer2": 16.5,
+          "eer2": 12.0,
+          "ahri": "123456789",
+          "total_price": 3860,
+          "tax_credit": true
+        }
+      }
+    }
+  }
+};
 
 function populateProducts() {
   const categorySelect = document.getElementById('category');
@@ -101,6 +124,18 @@ function fetchWeather() {
       document.getElementById('weather').innerText = "Weather unavailable";
     });
 }
-setInterval(updateDateTime, 1000);
-updateDateTime();
-fetchWeather();
+
+window.onload = () => {
+  const manufacturerSelect = document.getElementById('manufacturer');
+  for (const mfr in units) {
+    const opt = document.createElement('option');
+    opt.value = mfr;
+    opt.innerText = mfr;
+    manufacturerSelect.appendChild(opt);
+  }
+  manufacturerSelect.addEventListener('change', populateProducts);
+  populateProducts();
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
+  fetchWeather();
+};
