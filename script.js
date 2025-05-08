@@ -58,23 +58,22 @@ async function generatePDF() {
   };
 }
 
-// Update date and fetch weather
 function updateDateTime() {
   const now = new Date();
   document.getElementById('datetime').innerText = now.toLocaleString();
 }
 
 function fetchWeather() {
-  const apiKey = 'demo'; // Replace with your OpenWeatherMap API key
-  const city = 'San Antonio';
-  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`)
+  const city = '78216';
+  const apiKey = '581ba534f9eb634115115d34fc644292';
+  fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${city},us&appid=${apiKey}&units=imperial`)
     .then(res => res.json())
     .then(data => {
       const temp = Math.round(data.main.temp);
-      document.getElementById('weather').innerText = `${city}: ${temp}°F`;
+      document.getElementById('weather').innerText = `San Antonio: ${temp}°F`;
     })
     .catch(() => {
-      document.getElementById('weather').innerText = `${city}: weather unavailable`;
+      document.getElementById('weather').innerText = `San Antonio: weather unavailable`;
     });
 }
 

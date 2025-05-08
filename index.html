@@ -41,5 +41,13 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
+
+  <footer style="margin-top: 40px; text-align: center; font-size: 0.85rem; color: #777;">
+    <p id="last-updated"></p>
+    <p>© 2025 <img src="logo.png" alt="Logo" style="height: 14px; vertical-align: middle;" /> Cowboys A/C & Heating. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("last-updated").innerText = "Last Updated: " + new Date().toLocaleString();
+  </script>
 </body>
 </html>
