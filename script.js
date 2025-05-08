@@ -26,46 +26,36 @@ const units = {
           "ahri": "215696475",
           "total_price": 5038,
           "tax_credit": true
-        },
-        "4 Ton": {
-          "price": 3271,
-          "coil": "EAM5X48M21A",
-          "coil_price": 500,
-          "furnace": "G80CTL0902120B",
-          "furnace_price": 1580,
-          "seer2": 18.5,
-          "eer2": 10.5,
-          "ahri": "215700584",
-          "total_price": 5351,
-          "tax_credit": true
         }
       }
-    },
-    "C5A8T": {
-      "label": "C5A8T Ion Two-Stage AC",
+    }
+  },
+  "Century HVAC Supplies": {
+    "YC6": {
+      "label": "YC6 2-Stage AC",
       "options": {
         "2 Ton": {
-          "price": 2051,
-          "coil": "EVM5X24M14A",
-          "coil_price": 343,
-          "furnace": "N80VSL0451412B",
-          "furnace_price": 674,
-          "seer2": 16.5,
-          "eer2": 13.0,
-          "ahri": "216377101",
-          "total_price": 3068,
+          "price": 1703.84,
+          "coil": "CTM24A5ABS1",
+          "coil_price": 528.83,
+          "furnace": "Y81E060A12SMPS1",
+          "furnace_price": 846.57,
+          "seer2": 17.25,
+          "eer2": 12.75,
+          "ahri": "216600741",
+          "total_price": 3079.24,
           "tax_credit": true
         },
         "3 Ton": {
-          "price": 2228,
-          "coil": "EAM5X36M17A",
-          "coil_price": 564,
-          "furnace": "N80VSL0701716B",
-          "furnace_price": 699,
-          "seer2": 15.5,
-          "eer2": 12.5,
-          "ahri": "216393919",
-          "total_price": 3491,
+          "price": 1803.9,
+          "coil": "CTM36A5ABS1",
+          "coil_price": 560.25,
+          "furnace": "Y81E080A16SMPS1",
+          "furnace_price": 878.0,
+          "seer2": 17.5,
+          "eer2": 13.0,
+          "ahri": "216600999",
+          "total_price": 3242.15,
           "tax_credit": true
         }
       }
