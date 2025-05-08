@@ -1,1 +1,41 @@
-<!DOCTYPE html><html><head><title>Test</title></head><body>Estimator</body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cowboys Estimator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header-bar">
+    <img src="logo.png" alt="Cowboys AC Logo" class="logo" />
+    <div class="header-info">
+      <div id="datetime">Loading...</div>
+      <div id="weather">San Antonio: --°F</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>HVAC Estimate Generator</h1>
+    <label for="manufacturer">Select Manufacturer:</label>
+    <select id="manufacturer"></select>
+
+    <label for="category">Select Product:</label>
+    <select id="category"></select>
+
+    <label for="tonnage">Select Size:</label>
+    <select id="tonnage"></select>
+
+    <button onclick="generatePDF()">Generate PDF</button>
+  </div>
+
+  <footer>
+    <p id="last-updated"></p>
+    <p>© 2025 <img src="logo.png" alt="Logo" style="height: 14px; vertical-align: middle;" /> Cowboys A/C & Heating. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
