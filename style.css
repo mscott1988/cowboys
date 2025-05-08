@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   background: #fff;
@@ -10,8 +11,7 @@ body {
   text-align: center;
 }
 .logo {
-  width: 220px;
-  margin-bottom: 20px;
+  width: 160px;
 }
 select, button {
   display: block;
