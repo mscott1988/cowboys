@@ -174,3 +174,4 @@ window.onload = () => {
   updateDateTime();
   fetchWeather();
 };
+
