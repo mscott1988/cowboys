@@ -40,18 +40,29 @@ body {
 .card h1 {
   margin-top: 0;
   color: #A67B5B;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
 }
 select, button {
   width: 100%;
   max-width: 400px;
   padding: 10px;
-  margin: 12px auto;
   font-size: 1rem;
   border-radius: 8px;
   border: none;
   display: block;
+  margin: 0 auto;
 }
-
 select {
   background: #fff;
   color: #000;
@@ -60,6 +71,7 @@ button {
   background: #E63946;
   color: #fff;
   cursor: pointer;
+  margin-top: 20px;
 }
 button:hover {
   background: #c62836;
@@ -70,3 +82,4 @@ footer {
   font-size: 0.85rem;
   color: #C2B280;
 }
+
