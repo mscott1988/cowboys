@@ -16,22 +16,38 @@
       </div>
     </header>
 
-    <label for="manufacturer">Manufacturer</label>
-<select id="manufacturer"></select>
+    <section class="card">
+      <h1>HVAC System Estimate</h1>
 
-<label for="category">Model</label>
-<select id="category"></select>
+      <div class="input-group">
+        <label for="manufacturer">Manufacturer</label>
+        <select id="manufacturer" disabled>
+          <option selected>Robert Madden</option>
+        </select>
+      </div>
 
-<label for="tonnage">Tonnage</label>
-<select id="tonnage"></select>
+      <div class="input-group">
+        <label for="category">Model</label>
+        <select id="category"></select>
+      </div>
 
-<label for="airHandler">Air Handler</label>
-<select id="airHandler"></select>
+      <div class="input-group">
+        <label for="tonnage">Tonnage</label>
+        <select id="tonnage"></select>
+      </div>
 
-<label for="heatKit">Heat Kit</label>
-<select id="heatKit"></select>
+      <div class="input-group">
+        <label for="airHandler">Air Handler</label>
+        <select id="airHandler"></select>
+      </div>
 
-<button onclick="generatePDF()">Generate PDF</button>
+      <div class="input-group">
+        <label for="heatKit">Heat Kit</label>
+        <select id="heatKit"></select>
+      </div>
+
+      <button onclick="generatePDF()">Generate PDF</button>
+    </section>
 
     <footer>
       <p id="last-updated"></p>
