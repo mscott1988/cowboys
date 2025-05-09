@@ -26,6 +26,83 @@ const units = {
           ahri: "215696475",
           total_price: 5038,
           tax_credit: true
+        },
+        "4 Ton": {
+          price: 3271,
+          coil: "EAM5X48M21A",
+          coil_price: 500,
+          furnace: "G80CTL0902120B",
+          furnace_price: 1580,
+          seer2: 18.5,
+          eer2: 10.5,
+          ahri: "215700584",
+          total_price: 5351,
+          tax_credit: true
+        },
+        "5 Ton": {
+          price: 3450,
+          coil: "EAM5X60M21A",
+          coil_price: 530,
+          furnace: "G80CTL1102400B",
+          furnace_price: 1680,
+          seer2: 17.8,
+          eer2: 10.2,
+          ahri: "215700586",
+          total_price: 5660,
+          tax_credit: true
+        }
+      }
+    },
+    "C5A8T": {
+      label: "C5A8T Ion Two-Stage AC",
+      options: {
+        "2 Ton": {
+          price: 2051,
+          coil: "EVM5X24M14A",
+          coil_price: 343,
+          furnace: "N80VSL0451412B",
+          furnace_price: 674,
+          seer2: 16.5,
+          eer2: 13.0,
+          ahri: "216377101",
+          total_price: 3068,
+          tax_credit: true
+        },
+        "3 Ton": {
+          price: 2228,
+          coil: "EAM5X36M17A",
+          coil_price: 564,
+          furnace: "N80VSL0701716B",
+          furnace_price: 699,
+          seer2: 15.5,
+          eer2: 12.5,
+          ahri: "216393919",
+          total_price: 3491,
+          tax_credit: true
+        },
+        "4 Ton": {
+          price: 2650,
+          coil: "EAM5X48M21A",
+          coil_price: 580,
+          furnace: "N80VSL0902120B",
+          furnace_price: 760,
+          seer2: 15.6,
+          eer2: 11.8,
+          ahri: "216393921",
+          total_price: 3990,
+          tax_credit: true
+        },
+        "5 Ton": {
+          price: 2985,
+          coil: "EAM5X60M21A",
+          coil_price: 610,
+          furnace: "N80VSL1102400B",
+          furnace_price: 798,
+          seer2: 15.8,
+          eer2: 11.9,
+          ahri: "216393922",
+          total_price: 4393,
+          tax_credit: true
         }
       }
     },
@@ -33,122 +110,107 @@ const units = {
       label: "N5A5S Single-Stage AC",
       options: {
         "2 Ton": {
-          price: 1375,
-          coil: "EAM4X24L17A",
-          coil_price: 328,
-          furnace: "N80ESN0451412A",
-          furnace_price: 599,
+          price: 1385,
+          coil: "EAM5X24M14A",
+          coil_price: 445,
+          furnace: "N80MSN0451412A",
+          furnace_price: 617,
           seer2: 14.3,
-          eer2: 11.7,
-          ahri: "213829151",
-          total_price: 2302,
+          eer2: 13.0,
+          ahri: "214913620",
+          total_price: 2447,
           tax_credit: false
         },
         "3 Ton": {
-          price: 1480,
-          coil: "EAM4X36L17A",
-          coil_price: 352,
-          furnace: "N80ESN0701716A",
-          furnace_price: 620,
+          price: 1492,
+          coil: "EAM5X36M17A",
+          coil_price: 475,
+          furnace: "N80MSN0701716A",
+          furnace_price: 642,
           seer2: 14.5,
-          eer2: 12.0,
-          ahri: "213829155",
-          total_price: 2452,
+          eer2: 12.7,
+          ahri: "214913621",
+          total_price: 2609,
+          tax_credit: false
+        },
+        "4 Ton": {
+          price: 1654,
+          coil: "EAM5X48M21A",
+          coil_price: 500,
+          furnace: "N80MSN0902120A",
+          furnace_price: 685,
+          seer2: 14.6,
+          eer2: 12.5,
+          ahri: "214913622",
+          total_price: 2839,
+          tax_credit: false
+        },
+        "5 Ton": {
+          price: 1825,
+          coil: "EAM5X60M21A",
+          coil_price: 530,
+          furnace: "N80MSN1102400A",
+          furnace_price: 710,
+          seer2: 14.7,
+          eer2: 12.3,
+          ahri: "214913623",
+          total_price: 3065,
+          tax_credit: false
+        }
+      }
+    },
+    "R5A5S": {
+      label: "R5A5S Performance Single-Stage AC",
+      options: {
+        "2 Ton": {
+          price: 1412,
+          coil: "EAM5X24M14A",
+          coil_price: 445,
+          furnace: "G80CTL0701412B",
+          furnace_price: 1460,
+          seer2: 14.3,
+          eer2: 12.9,
+          ahri: "214913624",
+          total_price: 3317,
+          tax_credit: false
+        },
+        "3 Ton": {
+          price: 1535,
+          coil: "EAM5X36M17A",
+          coil_price: 475,
+          furnace: "G80CTL0902120B",
+          furnace_price: 1580,
+          seer2: 14.6,
+          eer2: 12.7,
+          ahri: "214913625",
+          total_price: 3590,
+          tax_credit: false
+        },
+        "4 Ton": {
+          price: 1695,
+          coil: "EAM5X48M21A",
+          coil_price: 500,
+          furnace: "G80CTL0902120B",
+          furnace_price: 1580,
+          seer2: 14.8,
+          eer2: 12.4,
+          ahri: "214913626",
+          total_price: 3775,
+          tax_credit: false
+        },
+        "5 Ton": {
+          price: 1870,
+          coil: "EAM5X60M21A",
+          coil_price: 530,
+          furnace: "G80CTL1102400B",
+          furnace_price: 1680,
+          seer2: 15.0,
+          eer2: 12.2,
+          ahri: "214913627",
+          total_price: 4080,
           tax_credit: false
         }
       }
     }
   }
-};
-
-function populateProducts() {
-  const categorySelect = document.getElementById('category');
-  const tonnageSelect = document.getElementById('tonnage');
-  categorySelect.innerHTML = '';
-  tonnageSelect.innerHTML = '';
-  const selectedMfr = document.getElementById('manufacturer').value;
-  const productList = units[selectedMfr];
-  for (const model in productList) {
-    const opt = document.createElement('option');
-    opt.value = model;
-    opt.innerText = productList[model].label;
-    categorySelect.appendChild(opt);
-  }
-  populateTonnage();
-}
-
-function populateTonnage() {
-  const tonnageSelect = document.getElementById('tonnage');
-  tonnageSelect.innerHTML = '';
-  const selectedMfr = document.getElementById('manufacturer').value;
-  const selectedModel = document.getElementById('category').value;
-  const options = units[selectedMfr][selectedModel].options;
-  for (const ton in options) {
-    const opt = document.createElement('option');
-    opt.value = ton;
-    opt.innerText = ton;
-    tonnageSelect.appendChild(opt);
-  }
-}
-
-function generatePDF() {
-  const mfr = document.getElementById('manufacturer').value;
-  const model = document.getElementById('category').value;
-  const tonnage = document.getElementById('tonnage').value;
-  const unitData = units[mfr][model].options[tonnage];
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
-  const logo = new Image();
-  logo.src = "logo.png";
-  logo.onload = () => {
-    doc.addImage(logo, "PNG", 15, 10, 40, 25);
-    doc.setFontSize(16);
-    doc.text("HVAC Estimate - Cowboys A/C & Heating", 60, 20);
-    doc.setFontSize(12);
-    doc.text(`Manufacturer: ${mfr}`, 20, 40);
-    doc.text(`Model: ${model} (${tonnage}) - $${unitData.price}`, 20, 50);
-    doc.text(`Coil: ${unitData.coil} - $${unitData.coil_price}`, 20, 60);
-    doc.text(`Furnace: ${unitData.furnace} - $${unitData.furnace_price}`, 20, 70);
-    doc.text(`SEER2: ${unitData.seer2}, EER2: ${unitData.eer2}`, 20, 80);
-    if (unitData.tax_credit) doc.text("✅ 25C Tax Credit Eligible", 20, 90);
-    doc.text(`AHRI #: ${unitData.ahri}`, 20, 100);
-    doc.setFont("helvetica", "bold");
-    doc.text(`TOTAL SYSTEM PRICE: $${unitData.total_price}`, 20, 115);
-    doc.save("Cowboys_Estimate.pdf");
-  };
-}
-
-function updateDateTime() {
-  const now = new Date();
-  document.getElementById("datetime").innerText = now.toLocaleString();
-  document.getElementById("last-updated").innerText = "Last Updated: " + now.toLocaleString();
-}
-
-function fetchWeather() {
-  const apiKey = '581ba534f9eb634115115d34fc644292';
-  fetch(`https://api.openweathermap.org/data/2.5/weather?zip=78216,us&appid=${apiKey}&units=imperial`)
-    .then(res => res.json())
-    .then(data => {
-      const temp = Math.round(data.main.temp);
-      document.getElementById('weather').innerText = `San Antonio: ${temp}°F`;
-    })
-    .catch(() => {
-      document.getElementById('weather').innerText = "Weather unavailable";
-    });
-}
-
-window.onload = () => {
-  const manufacturerSelect = document.getElementById('manufacturer');
-  for (const mfr in units) {
-    const opt = document.createElement('option');
-    opt.value = mfr;
-    opt.innerText = mfr;
-    manufacturerSelect.appendChild(opt);
-  }
-  manufacturerSelect.addEventListener('change', populateProducts);
-  document.getElementById('category').addEventListener('change', populateTonnage);
-  populateProducts();
-  setInterval(updateDateTime, 1000);
-  updateDateTime();
-  fetchWeather();
 };
