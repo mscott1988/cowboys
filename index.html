@@ -1,62 +1,118 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cowboys Estimator</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Cowboys AC Estimator</title>
+  <style>
+    body {
+      background-color: #0B1F3A;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .accent {
+      background-color: #334232;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    select, button {
+      background-color: #E63946;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #A97B50;
+    }
+  </style>
 </head>
 <body>
-  <main class="wrapper">
-    <header class="header">
-      <img src="logo.png" alt="Cowboys AC Logo" class="logo">
-      <div class="info">
-        <div id="datetime">Loading time...</div>
-        <div id="weather">San Antonio: --°F</div>
-      </div>
-    </header>
+  <header>
+    <img src="logo.png" alt="Cowboys AC Logo" width="150">
+    <div>
+      <div id="datetime"></div>
+      <div id="weather"></div>
+    </div>
+  </header>
 
-    <section class="card">
-      <h1>HVAC System Estimate</h1>
+  <div class="accent">
+    <h2>Unit Estimator</h2>
+    <label for="category">Select Category:</label>
+    <select id="category" onchange="populateModels()">
+      <option value="">-- Select --</option>
+    </select>
+    <br>
+    <label for="model">Select Model:</label>
+    <select id="model">
+      <option value="">-- Select --</option>
+    </select>
+    <br>
+    <button onclick="generatePDF()">Generate PDF</button>
+  </div>
 
-      <div class="input-group">
-        <label for="manufacturer">Manufacturer</label>
-        <select id="manufacturer" disabled>
-          <option selected>Robert Madden</option>
-        </select>
-      </div>
+  <footer>© 2025 Cowboys AC – All Rights Reserved.</footer>
 
-      <div class="input-group">
-        <label for="category">Model</label>
-        <select id="category"></select>
-      </div>
+  <script src="data.js"></script>
+  <script>
+    const categoryDropdown = document.getElementById('category');
+    const modelDropdown = document.getElementById('model');
+    const categories = data.categories;
 
-      <div class="input-group">
-        <label for="tonnage">Tonnage</label>
-        <select id="tonnage"></select>
-      </div>
+    categories.forEach(cat => {
+      const option = document.createElement('option');
+      option.value = cat;
+      option.textContent = cat;
+      categoryDropdown.appendChild(option);
+    });
 
-      <div class="input-group">
-        <label for="airHandler">Air Handler</label>
-        <select id="airHandler"></select>
-      </div>
+    function populateModels() {
+      modelDropdown.innerHTML = '<option value="">-- Select --</option>';
+      const selected = categoryDropdown.value;
+      const categoryData = data[selected];
+      if (!categoryData) return;
 
-      <div class="input-group">
-        <label for="heatKit">Heat Kit</label>
-        <select id="heatKit"></select>
-      </div>
+      Object.entries(categoryData).forEach(([modelType, models]) => {
+        const group = document.createElement('optgroup');
+        group.label = modelType;
+        models.forEach(model => {
+          const opt = document.createElement('option');
+          opt.value = model.model;
+          opt.textContent = model.model;
+          group.appendChild(opt);
+        });
+        modelDropdown.appendChild(group);
+      });
+    }
 
-      <button onclick="generatePDF()">Generate PDF</button>
-    </section>
+    function generatePDF() {
+      alert("PDF generation triggered for: " + modelDropdown.value);
+    }
 
-    <footer>
-      <p id="last-updated"></p>
-      <p>© 2025 Cowboys A/C & Heating. All rights reserved.</p>
-    </footer>
-  </main>
+    function updateTimeAndWeather() {
+      const now = new Date();
+      document.getElementById('datetime').textContent = now.toLocaleString();
+      fetch('https://api.openweathermap.org/data/2.5/weather?q=San+Antonio,US&appid=581ba534f9eb634115115d34fc644292&units=imperial')
+        .then(res => res.json())
+        .then(data => {
+          const temp = Math.round(data.main.temp);
+          const desc = data.weather[0].description;
+          document.getElementById('weather').textContent = `${temp}°F – ${desc}`;
+        });
+    }
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="script.js"></script>
+    updateTimeAndWeather();
+    setInterval(updateTimeAndWeather, 60000);
+  </script>
 </body>
 </html>
-
